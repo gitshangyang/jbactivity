@@ -11,7 +11,6 @@ var activityRouter = require('./routes/activity');
 
 var app = express();
 
-console.log("app start");
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -26,9 +25,12 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/setup', setupRouter);
 app.use('/activity', activityRouter);
+console.log("app start");
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+  console.log("error");
+
   next(createError(404));
 });
 
