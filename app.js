@@ -11,6 +11,7 @@ var activityRouter = require('./routes/activity');
 
 var app = express();
 
+console.log("app start");
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
