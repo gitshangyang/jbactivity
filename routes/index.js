@@ -13,7 +13,7 @@ var json = JSON.parse(JSON.stringify(configjson));
 /* GET home page. */
 router.get('/', function(req, res, next) {
   console.log("router in!!");
-  console.log("req.session.token:" + req.session.token);      
+  console.log("req.session:" + req.session);      
   if (!req.session.token) {
     res.render('index', {
       title: 'Unauthenticated',
