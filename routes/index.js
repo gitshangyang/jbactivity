@@ -11,7 +11,8 @@ var configjson  = require('../public/config/config.json');
 var json = JSON.parse(JSON.stringify(configjson));
 
 /* GET home page. */
-router.get('/', function(req, res, next) {      
+router.get('/', function(req, res, next) {
+  console.log("router in!!");      
   if (!req.session.token) {
     res.render('index', {
       title: 'Unauthenticated',
